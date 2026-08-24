@@ -1,0 +1,1054 @@
+UNIT 3 – Prompt Engineering Techniques
+
+Topic 2: Zero-Shot Prompting
+
+⸻
+
+Learning Objectives
+
+After completing this topic, students will be able to:
+
+* Define Zero-Shot Prompting.
+* Understand how Zero-Shot Prompting works.
+* Differentiate between zero-shot and example-based prompting.
+* Create effective zero-shot prompts.
+* Identify situations where zero-shot prompting works well.
+* Understand its limitations.
+* Improve zero-shot prompts using clear instructions and constraints.
+* Apply zero-shot prompting to classification, summarization, translation, generation, and other tasks.
+
+⸻
+
+1. Introduction
+
+In Prompt Engineering, we often want an AI model to perform a task without showing it an example of the expected answer.
+
+This technique is called:
+
+Zero-Shot Prompting
+
+The term “zero-shot” means that we provide zero examples of the task in the prompt.
+
+The AI receives an instruction and attempts to perform the task based on its existing capabilities and understanding.
+
+⸻
+
+2. Simple Definition
+
+Zero-Shot Prompting is a technique in which an AI model is asked to perform a task without being given any examples of the desired input-output behavior.
+
+Simple pattern
+
+Instruction
+     ↓
+AI Model
+     ↓
+Output
+
+There are no examples between the instruction and the task.
+
+⸻
+
+3. Real-Life Analogy
+
+Imagine a teacher tells a student:
+
+“Classify these animals as mammals, birds, or reptiles.”
+
+The teacher gives:
+
+* No example
+* No solved question
+
+The student uses their existing knowledge to perform the task.
+
+This is similar to Zero-Shot Prompting.
+
+⸻
+
+4. Zero-Shot vs Example-Based Prompting
+
+Zero-Shot
+
+Classify the following review as Positive, Negative, or Neutral:
+"The product arrived on time and works perfectly."
+
+No examples are provided.
+
+One-Shot
+
+Example:
+Review: "Excellent product."
+Classification: Positive
+Now classify:
+"The product arrived on time and works perfectly."
+
+One example is provided.
+
+Few-Shot
+
+Multiple examples are provided before the actual task.
+
+⸻
+
+5. Why Is It Called “Zero-Shot”?
+
+The word shot refers to an example of the task being demonstrated.
+
+Therefore:
+
+Technique	Number of examples
+Zero-Shot	0
+One-Shot	1
+Few-Shot	A small number
+Many-Shot	Many examples
+
+In this topic, our focus is Zero-Shot Prompting.
+
+⸻
+
+6. Basic Zero-Shot Prompt
+
+Summarize the following paragraph in three bullet points:
+[TEXT]
+
+There is:
+
+* No example summary
+* No demonstration
+* Only an instruction
+
+Therefore, it is a zero-shot prompt.
+
+⸻
+
+7. Zero-Shot Classification
+
+One of the most common applications is classification.
+
+Example
+
+Classify the following customer feedback into one of these
+categories:
+- Pricing
+- Support
+- Features
+Feedback:
+"The subscription is too expensive for my small business."
+
+The AI must select the appropriate category without seeing examples.
+
+Expected result:
+
+Pricing
+
+⸻
+
+8. Why Classification Works Well
+
+The task gives explicit labels:
+
+Input
+ ↓
+Available Categories
+ ↓
+Choose One
+
+This reduces ambiguity.
+
+⸻
+
+9. Zero-Shot Sentiment Analysis
+
+Prompt:
+
+Classify the sentiment of the following statement as:
+- Positive
+- Negative
+- Neutral
+Statement:
+"The application is easy to use and the interface looks clean."
+
+Expected:
+
+Positive
+
+No examples are provided.
+
+⸻
+
+10. Zero-Shot Topic Classification
+
+Identify the primary topic of the following text.
+Choose exactly one:
+- Artificial Intelligence
+- Cybersecurity
+- Cloud Computing
+- Data Science
+- Web Development
+Text:
+"Cloud platforms allow organizations to deploy applications
+without managing physical servers."
+
+Expected:
+
+Cloud Computing
+
+⸻
+
+11. Zero-Shot Translation
+
+Translate the following sentence from English to Hindi.
+"Artificial intelligence is changing the way people work."
+
+No translation example is given.
+
+Therefore, this is zero-shot prompting.
+
+⸻
+
+12. Zero-Shot Summarization
+
+Summarize the following article in approximately 100 words.
+Requirements:
+- Preserve the main idea.
+- Include the most important supporting points.
+- Do not introduce new information.
+- Use simple English.
+Article:
+"""
+[ARTICLE]
+"""
+
+Again, no example summary is provided.
+
+⸻
+
+13. Zero-Shot Question Generation
+
+Generate five short-answer questions from the following
+Operating Systems notes.
+Requirements:
+- Suitable for second-year B.Tech IT students.
+- Cover different concepts.
+- Avoid duplicate questions.
+- Include the answer after each question.
+Notes:
+"""
+[NOTES]
+"""
+
+⸻
+
+14. Zero-Shot Text Transformation
+
+Rewrite the following paragraph in simple English.
+Requirements:
+- Preserve the original meaning.
+- Use shorter sentences.
+- Avoid technical jargon where possible.
+Text:
+"""
+[TEXT]
+"""
+
+⸻
+
+15. Zero-Shot Extraction
+
+Suppose we have:
+
+“Pravin is a B.Tech IT student who knows C++, Java, Python, and SQL.”
+
+Prompt:
+
+Extract the person's name and technical skills from the
+following text.
+Return the result as:
+Name:
+Skills:
+Text:
+"""
+Pravin is a B.Tech IT student who knows C++, Java, Python,
+and SQL.
+"""
+
+The model receives no extraction example.
+
+⸻
+
+16. Zero-Shot Generation
+
+Zero-shot prompting is not limited to classification.
+
+Example:
+
+Generate five project ideas for final-year B.Tech IT students
+using Generative AI.
+Requirements:
+- Practical
+- Technically feasible
+- Suitable for a student project
+- Include a one-line description for each
+
+⸻
+
+17. Zero-Shot Code Generation
+
+Write a C++ program to check whether a number is prime.
+Requirements:
+- Use standard C++.
+- Keep the program beginner-friendly.
+- Include comments.
+- Explain the time complexity.
+
+No code example is provided.
+
+Therefore, this is zero-shot prompting.
+
+⸻
+
+18. Zero-Shot Mathematics
+
+Solve the following equation step by step:
+2x + 5 = 17
+Show each algebraic step clearly.
+
+No solved example is given.
+
+⸻
+
+19. Zero-Shot Reasoning Instruction
+
+A prompt can request a structured solution:
+
+Solve the following problem.
+Requirements:
+1. Identify the given information.
+2. State the relevant formula.
+3. Substitute the values.
+4. Calculate the result.
+5. State the final answer clearly.
+Problem:
+Find the time complexity of:
+for(int i = 0; i < n; i++)
+    cout << i;
+
+This remains zero-shot because no example solution is provided.
+
+⸻
+
+20. Zero-Shot vs “Step-by-Step”
+
+Students may confuse these concepts.
+
+They are different dimensions.
+
+Zero-Shot
+
+Describes:
+
+How many examples are provided?
+
+Step-by-Step
+
+Describes:
+
+How the task is requested to be approached or presented.
+
+Therefore, a prompt can be:
+
+Zero-shot + step-by-step
+
+Example:
+
+Solve this problem step by step.
+
+No example is provided.
+
+⸻
+
+21. Zero-Shot + Output Control
+
+We can combine Zero-Shot Prompting with output constraints.
+
+Classify each sentence as Positive, Negative, or Neutral.
+Return only one label per sentence.
+1. "The software works perfectly."
+2. "The application keeps crashing."
+3. "The update was released yesterday."
+
+Expected format:
+
+Positive
+Negative
+Neutral
+
+⸻
+
+22. Zero-Shot + Table Output
+
+Classify the following customer feedback into:
+Pricing
+Support
+Features
+Return the result in a table:
+| Feedback | Category | Reason |
+Feedback:
+1. "The monthly price is too high."
+2. "The support team hasn't replied."
+3. "The application needs dark mode."
+
+This demonstrates how output control can improve usability.
+
+⸻
+
+23. Zero-Shot + Role
+
+Act as a customer-support analyst.
+Classify each feedback item into:
+- Pricing
+- Support
+- Features
+Provide one short reason for each classification.
+Feedback:
+"""
+[FEEDBACK]
+"""
+
+The role adds perspective, but there are still zero examples.
+
+⸻
+
+24. Zero-Shot + Context
+
+You are analyzing feedback collected from users of a
+college learning-management system.
+Classify each feedback item into:
+- Pricing
+- Support
+- Features
+Use "Pricing" only for cost-related complaints,
+"Support" for service/help-related problems,
+and "Features" for requests or problems related to
+functionality.
+Feedback:
+"""
+[FEEDBACK]
+"""
+
+This is stronger because the categories are defined.
+
+⸻
+
+25. Defining Categories Clearly
+
+Suppose the categories are:
+
+Pricing
+Support
+Features
+
+This may be ambiguous.
+
+Instead:
+
+Pricing = complaints or questions about cost, subscription,
+fees, or billing.
+Support = issues involving customer service, assistance,
+response time, or technical support.
+Features = requests or problems related to product
+functionality or capabilities.
+
+This can improve classification consistency.
+
+⸻
+
+26. Zero-Shot Classification with Three Categories
+
+A useful practical example from the syllabus:
+
+Act as a customer-feedback classification system.
+Classify each feedback item into exactly one category:
+1. Pricing – concerns about cost, fees, or billing.
+2. Support – concerns about customer service or assistance.
+3. Features – concerns about product functionality.
+Rules:
+- Select exactly one category.
+- Do not create new categories.
+- Provide a one-sentence reason.
+Feedback:
+"The new version is expensive, but I also like the new
+dashboard."
+
+The AI must determine the primary issue.
+
+⸻
+
+27. Handling Ambiguous Inputs
+
+Suppose:
+
+“The software is expensive and the support team is slow.”
+
+This contains two issues.
+
+A simple zero-shot prompt might produce inconsistent results.
+
+Improve the instruction:
+
+If multiple categories apply, select the category that
+represents the primary complaint.
+Do not return multiple categories.
+
+This introduces a clear decision rule.
+
+⸻
+
+28. Zero-Shot Prompt for Email Classification
+
+Classify the following email into exactly one category:
+- Complaint
+- Inquiry
+- Request
+- Feedback
+Email:
+"""
+[EMAIL]
+"""
+Return:
+Category: [category]
+Reason: [one sentence]
+
+⸻
+
+29. Zero-Shot Prompt for Spam Detection
+
+Classify the following message as:
+- Spam
+- Not Spam
+Consider:
+- Suspicious promotional content
+- Requests for sensitive information
+- Unusual links
+- Unsolicited offers
+Message:
+"""
+[MESSAGE]
+"""
+
+For real-world security systems, AI classification should not be the only security control.
+
+⸻
+
+30. Zero-Shot Summarization with Audience
+
+Summarize the following research abstract for first-year
+engineering students.
+Requirements:
+- Use simple English.
+- Explain technical terms briefly.
+- Focus on the problem, approach, and key finding.
+- Limit the summary to 150 words.
+Abstract:
+"""
+[ABSTRACT]
+"""
+
+The audience constraint significantly affects the output.
+
+⸻
+
+31. Zero-Shot Prompt for Resume Feedback
+
+Act as a career advisor.
+Review the following resume summary.
+Identify:
+1. Clarity problems
+2. Weak statements
+3. Missing relevant information
+4. Unnecessary wording
+Then provide an improved version.
+Do not invent qualifications or experience.
+Resume Summary:
+"""
+[SUMMARY]
+"""
+
+No example is provided.
+
+⸻
+
+32. Zero-Shot Prompt for Code Debugging
+
+Act as a C++ programming mentor.
+Analyze the following code.
+Tasks:
+1. Identify the error.
+2. Explain why it occurs.
+3. Provide corrected code.
+4. Explain the correction.
+Code:
+```cpp
+[CODE]
+Again, zero examples.
+---
+# 33. Zero-Shot Prompt for Comparison
+```text id="m6x2k8"
+Compare TCP and UDP.
+Audience:
+Second-year B.Tech IT students.
+Output:
+| Feature | TCP | UDP |
+Include:
+- Connection
+- Reliability
+- Ordering
+- Speed
+- Use cases
+
+This is zero-shot comparative prompting.
+
+⸻
+
+34. Advantages of Zero-Shot Prompting
+
+1. Simple
+
+It is easy to construct.
+
+2. Fast
+
+No examples need to be prepared.
+
+3. Flexible
+
+It can be applied to many tasks.
+
+4. Useful for general tasks
+
+Examples include:
+
+* Summarization
+* Translation
+* Explanation
+* Classification
+* Rewriting
+* Question generation
+* Code generation
+
+5. Less prompt overhead
+
+The prompt can be relatively short when the task is straightforward.
+
+⸻
+
+35. Limitations of Zero-Shot Prompting
+
+Zero-shot prompting is not always the best approach.
+
+1. Ambiguous tasks
+
+If the task is unclear, the output may vary.
+
+2. Complex formatting
+
+AI may not follow a very specific output pattern consistently.
+
+3. Specialized classification
+
+Without examples, subtle category distinctions may be difficult.
+
+4. Unusual tasks
+
+If the task requires a very specific transformation, examples may help.
+
+5. Domain-specific expectations
+
+The AI may not understand the exact pattern expected by the user.
+
+⸻
+
+36. When Should You Use Zero-Shot Prompting?
+
+Use it when:
+
+* The task is straightforward.
+* Instructions are clear.
+* The desired output is conventional.
+* Examples are unnecessary.
+* You want a quick result.
+* The task can be described precisely.
+
+Examples:
+
+Translate this sentence.
+
+Summarize this paragraph.
+
+Explain binary search.
+
+Classify the sentiment.
+
+⸻
+
+37. When Should You Avoid Zero-Shot Prompting?
+
+Consider examples when:
+
+* Output must follow a very specific pattern.
+* The task is unusual.
+* Categories are difficult to distinguish.
+* The desired style is highly specific.
+* The task has many exceptions.
+* The model repeatedly produces inconsistent results.
+
+This naturally leads to One-Shot and Few-Shot Prompting, which are the next techniques in the syllabus.
+
+⸻
+
+38. Zero-Shot Prompt Optimization
+
+Suppose the prompt is:
+
+Classify these reviews.
+
+The output may be inconsistent.
+
+Improve it step by step.
+
+Version 1
+
+Classify these reviews.
+
+Version 2
+
+Classify each review as Positive, Negative, or Neutral.
+
+Version 3
+
+Classify each review as Positive, Negative, or Neutral. Return exactly one label per review.
+
+Version 4
+
+Classify each review as exactly one of:
+Positive – clearly favorable opinion.
+Negative – clearly unfavorable opinion.
+Neutral – factual or balanced statement without a clear opinion.
+Return:
+Review Number | Label | One-sentence reason
+
+This demonstrates prompt optimization without examples.
+
+⸻
+
+39. Student Activity – Zero-Shot or Not?
+
+Ask students to identify whether each prompt is Zero-Shot.
+
+A
+
+Translate “Good morning” into Hindi.
+
+Answer: Zero-Shot ✅
+
+B
+
+Example:
+"Good morning" → "सुप्रभात"
+Translate:
+"Good evening"
+
+Answer: One-Shot ❌
+
+C
+
+Summarize this article in five bullet points.
+
+Answer: Zero-Shot ✅
+
+D
+
+Classify this text as positive or negative. Here are three examples…
+
+Answer: Few-Shot ❌
+
+⸻
+
+40. Classroom Activity – Zero-Shot Challenge
+
+Divide students into groups.
+
+Give each group a task:
+
+Group 1
+
+Sentiment classification
+
+Group 2
+
+Translation
+
+Group 3
+
+Text summarization
+
+Group 4
+
+Question generation
+
+Group 5
+
+Code generation
+
+Each group must create a zero-shot prompt.
+
+Then another group tests it.
+
+⸻
+
+41. Student Task – Zero-Shot Prompt Portfolio
+
+Create zero-shot prompts for:
+
+1. Text summarization
+2. Sentiment classification
+3. Translation
+4. Text extraction
+5. Code generation
+6. Mathematics
+7. Question generation
+8. Comparison
+9. Text rewriting
+10. Customer-feedback classification
+
+For each prompt identify:
+
+Task:
+Role:
+Instructions:
+Constraints:
+Output Format:
+
+⸻
+
+42. Student Task – Improve a Zero-Shot Prompt
+
+Start with:
+
+Classify customer feedback.
+
+Improve it by adding:
+
+1. Categories
+2. Category definitions
+3. Decision rule
+4. Output format
+5. Explanation requirement
+
+Students should compare the outputs from both prompts.
+
+⸻
+
+43. Practical Exercise
+
+Problem
+
+Classify the following feedback:
+
+“The application is useful, but the monthly subscription is too expensive.”
+
+Use:
+
+Categories:
+- Pricing
+- Support
+- Features
+Return:
+Category:
+Reason:
+
+Students should discuss:
+
+Which issue is primary?
+
+This demonstrates that clear decision rules are important in zero-shot classification.
+
+⸻
+
+44. Practical Exercise – Code
+
+Create a zero-shot prompt to ask AI:
+
+Write a C++ program that finds the largest element in an array.
+
+Students must include:
+
+* Role
+* Task
+* Context
+* Constraints
+* Output format
+
+⸻
+
+45. Practical Exercise – Mathematics
+
+Create a zero-shot prompt:
+
+Calculate the time complexity of nested loops.
+
+Students should request:
+
+* Explanation
+* Operation count if appropriate
+* Final Big-O notation
+* Reasoning/derivation
+* Space complexity
+
+⸻
+
+46. Best Practices
+
+Do
+
+* State the task clearly.
+* Define categories when classifying.
+* Explain ambiguous labels.
+* Specify the desired output.
+* Provide relevant context.
+* Add decision rules for difficult classifications.
+* Use constraints where necessary.
+* Review the output.
+
+Don’t
+
+* Assume AI knows your exact interpretation.
+* Use vague categories.
+* Give contradictory instructions.
+* Expect perfect results for complex tasks.
+* Treat AI output as automatically correct.
+
+⸻
+
+47. Common Mistakes
+
+Mistake	Problem	Better Approach
+“Classify this”	No categories	Define labels
+Unclear labels	Inconsistent classification	Define each label
+No output format	Difficult to process	Specify format
+Ambiguous input	Multiple interpretations	Add decision rule
+Overly broad task	Unfocused response	Narrow the task
+No constraints	Unexpected output	Add requirements
+Complex task with no examples	Pattern may be unclear	Consider few-shot
+
+⸻
+
+48. Zero-Shot Prompt Evaluation Rubric
+
+Criterion	Marks
+Task clearly defined	5
+Context provided	5
+Categories/instructions clear	5
+Constraints specified	5
+Output format defined	5
+Total	25
+
+⸻
+
+49. Practical Examination Question
+
+Question
+
+Create a Zero-Shot Prompt to classify customer feedback into exactly three categories:
+
+* Pricing
+* Support
+* Features
+
+The prompt should:
+
+* Define each category.
+* Provide a decision rule for ambiguous feedback.
+* Require exactly one category.
+* Return the category and a short reason.
+
+⸻
+
+50. Exam-Oriented Questions
+
+Short Answer
+
+1. What is Zero-Shot Prompting?
+2. Why is it called zero-shot?
+3. How many examples are provided in zero-shot prompting?
+4. Give two applications of Zero-Shot Prompting.
+5. What is the difference between zero-shot and one-shot prompting?
+6. What are the limitations of zero-shot prompting?
+
+Long Answer
+
+1. Explain Zero-Shot Prompting with examples.
+2. Explain the advantages and limitations of Zero-Shot Prompting.
+3. Design a zero-shot prompt for sentiment classification.
+4. Design a zero-shot prompt for customer-feedback classification.
+5. Explain how a zero-shot prompt can be optimized without adding examples.
+
+⸻
+
+51. Quick Revision
+
+Remember:
+
+Zero-Shot = Zero Examples
+
+Instruction
+     ↓
+AI
+     ↓
+Output
+
+Key Characteristics
+
+* No demonstration examples
+* Relies on the model’s existing capabilities
+* Simple to construct
+* Useful for common tasks
+* Can be improved using clear instructions and constraints
+
+⸻
+
+52. Zero-Shot vs One-Shot vs Few-Shot
+
+Technique	Examples	Typical Use
+Zero-Shot	0	Straightforward tasks
+One-Shot	1	Demonstrating a pattern
+Few-Shot	Few	Complex or specialized patterns
+
+Easy Memory Trick
+
+ZERO  → 0 examples
+ONE   → 1 example
+FEW   → Few examples
+
+⸻
+
+53. Final Takeaway
+
+The fundamental idea behind Zero-Shot Prompting is simple:
+
+Tell the AI what you want without showing it an example.
+
+However, effective zero-shot prompting requires more than simply giving an instruction.
+
+A strong zero-shot prompt should clearly communicate:
+
+Task + Context + Constraints + Output Format
+
+And when classification is involved:
+
+Categories + Category Definitions + Decision Rules
+
+Golden Principle
+
+If the task is simple and can be clearly described, try Zero-Shot Prompting first. If the model cannot reliably follow a specific pattern, consider providing examples through One-Shot or Few-Shot Prompting.
