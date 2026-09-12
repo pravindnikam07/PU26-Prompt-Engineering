@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>ShopEasy - Home</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f5f5f5;
+        color: #333;
+      }
+
+      /* NAVBAR */
+
+      .navbar {
+        background-color: white;
+        min-height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 15px 6%;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+      }
+
+      .logo {
+        font-size: 26px;
+        font-weight: bold;
+        color: #007bff;
+        text-decoration: none;
+      }
+
+      .search-box {
+        display: flex;
+        width: 40%;
+      }
+
+      .search-box input {
+        width: 100%;
+        padding: 11px;
+        border: 1px solid #ccc;
+        border-radius: 5px 0 0 5px;
+        font-size: 15px;
+        outline: none;
+      }
+
+      .search-box button {
+        padding: 11px 18px;
+        border: none;
+        background-color: #007bff;
+        color: white;
+        cursor: pointer;
+        border-radius: 0 5px 5px 0;
+      }
+
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+      }
+
+      .nav-links a {
+        text-decoration: none;
+        color: #333;
+        font-weight: 500;
+      }
+
+      .nav-links a:hover {
+        color: #007bff;
+      }
+
+      .cart {
+        color: #007bff !important;
+        font-weight: bold !important;
+      }
+
+      /* HERO */
+
+      .hero {
+        min-height: 420px;
+        background: linear-gradient(135deg, #007bff, #00a8ff);
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 60px 8%;
+      }
+
+      .hero-content {
+        max-width: 600px;
+      }
+
+      .hero-content h1 {
+        font-size: 48px;
+        margin-bottom: 20px;
+      }
+
+      .hero-content p {
+        font-size: 19px;
+        line-height: 1.6;
+        margin-bottom: 25px;
+      }
+
+      .shop-btn {
+        display: inline-block;
+        background-color: white;
+        color: #007bff;
+        padding: 13px 25px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      .shop-btn:hover {
+        background-color: #eee;
+      }
+
+      .hero-icon {
+        font-size: 150px;
+      }
+
+      /* SECTION */
+
+      .section {
+        padding: 50px 7%;
+      }
+
+      .section-title {
+        text-align: center;
+        font-size: 30px;
+        margin-bottom: 30px;
+      }
+
+      /* CATEGORIES */
+
+      .categories {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+      }
+
+      .category {
+        background-color: white;
+        padding: 30px;
+        text-align: center;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        transition: 0.3s;
+      }
+
+      .category:hover {
+        transform: translateY(-5px);
+      }
+
+      .category-icon {
+        font-size: 50px;
+        margin-bottom: 15px;
+      }
+
+      .category h3 {
+        margin-bottom: 10px;
+      }
+
+      .category a {
+        color: #007bff;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      /* PRODUCTS */
+
+      .products {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 25px;
+      }
+
+      .product-card {
+        background-color: white;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      }
+
+      .product-image {
+        height: 180px;
+        background-color: #e9ecef;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 80px;
+      }
+
+      .product-details {
+        padding: 18px;
+      }
+
+      .product-details h3 {
+        margin-bottom: 10px;
+      }
+
+      .price {
+        font-size: 20px;
+        color: #007bff;
+        font-weight: bold;
+        margin-bottom: 12px;
+      }
+
+      .product-btn {
+        display: block;
+        text-align: center;
+        background-color: #007bff;
+        color: white;
+        padding: 10px;
+        border-radius: 5px;
+        text-decoration: none;
+      }
+
+      .product-btn:hover {
+        background-color: #0056b3;
+      }
+
+      /* OFFER */
+
+      .offer {
+        margin: 10px 7% 50px;
+        padding: 45px;
+        text-align: center;
+        background-color: #212529;
+        color: white;
+        border-radius: 10px;
+      }
+
+      .offer h2 {
+        font-size: 32px;
+        margin-bottom: 10px;
+      }
+
+      .offer p {
+        margin-bottom: 20px;
+        font-size: 18px;
+      }
+
+      .offer a {
+        display: inline-block;
+        padding: 12px 25px;
+        background-color: #007bff;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+      }
+
+      /* FOOTER */
+
+      footer {
+        background-color: #212529;
+        color: white;
+        padding: 40px 7% 20px;
+      }
+
+      .footer-content {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+      }
+
+      .footer-column h3 {
+        margin-bottom: 15px;
+      }
+
+      .footer-column a {
+        display: block;
+        color: #ddd;
+        text-decoration: none;
+        margin-bottom: 10px;
+      }
+
+      .footer-column a:hover {
+        color: white;
+      }
+
+      .copyright {
+        text-align: center;
+        border-top: 1px solid #555;
+        margin-top: 30px;
+        padding-top: 20px;
+        color: #ccc;
+      }
+
+      /* RESPONSIVE */
+
+      @media (max-width: 900px) {
+        .navbar {
+          flex-wrap: wrap;
+          gap: 15px;
+        }
+
+        .search-box {
+          width: 100%;
+          order: 3;
+        }
+
+        .categories,
+        .products {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .footer-content {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .hero-icon {
+          display: none;
+        }
+      }
+
+      @media (max-width: 600px) {
+        .nav-links {
+          gap: 10px;
+          font-size: 13px;
+        }
+
+        .hero-content h1 {
+          font-size: 35px;
+        }
+
+        .categories,
+        .products,
+        .footer-content {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- NAVIGATION -->
+
+    <nav class="navbar">
+      <a href="index.html" class="logo"> ShopEasy </a>
+
+      <div class="search-box">
+        <input type="text" placeholder="Search products..." />
+
+        <button>Search</button>
+      </div>
+
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+
+        <a href="products.html">Products</a>
+
+        <a href="signin.html">Sign In</a>
+
+        <a href="signup.html">Sign Up</a>
+
+        <a href="#" class="cart"> 🛒 Cart </a>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Shop Smart. Shop Easy.</h1>
+
+        <p>
+          Discover amazing products at great prices. Find electronics, fashion,
+          home products, gaming accessories and much more.
+        </p>
+
+        <a href="products.html" class="shop-btn"> Shop Now </a>
+      </div>
+
+      <div class="hero-icon">🛍️</div>
+    </section>
+
+    <!-- CATEGORIES -->
+
+    <section class="section">
+      <h2 class="section-title">Shop by Category</h2>
+
+      <div class="categories">
+        <div class="category">
+          <div class="category-icon">📱</div>
+
+          <h3>Electronics</h3>
+
+          <a href="products.html"> View Products </a>
+        </div>
+
+        <div class="category">
+          <div class="category-icon">👕</div>
+
+          <h3>Fashion</h3>
+
+          <a href="products.html"> View Products </a>
+        </div>
+
+        <div class="category">
+          <div class="category-icon">🏠</div>
+
+          <h3>Home & Living</h3>
+
+          <a href="products.html"> View Products </a>
+        </div>
+
+        <div class="category">
+          <div class="category-icon">🎮</div>
+
+          <h3>Gaming</h3>
+
+          <a href="products.html"> View Products </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED PRODUCTS -->
+
+    <section class="section">
+      <h2 class="section-title">Featured Products</h2>
+
+      <div class="products">
+        <div class="product-card">
+          <div class="product-image">📱</div>
+
+          <div class="product-details">
+            <h3>Smartphone</h3>
+
+            <p class="price">₹24,999</p>
+
+            <a href="products.html" class="product-btn"> View Product </a>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-image">💻</div>
+
+          <div class="product-details">
+            <h3>Laptop</h3>
+
+            <p class="price">₹59,999</p>
+
+            <a href="products.html" class="product-btn"> View Product </a>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-image">🎧</div>
+
+          <div class="product-details">
+            <h3>Wireless Headphones</h3>
+
+            <p class="price">₹2,499</p>
+
+            <a href="products.html" class="product-btn"> View Product </a>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-image">⌚</div>
+
+          <div class="product-details">
+            <h3>Smart Watch</h3>
+
+            <p class="price">₹3,999</p>
+
+            <a href="products.html" class="product-btn"> View Product </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- OFFER -->
+
+    <section class="offer">
+      <h2>Special Offer</h2>
+
+      <p>Get up to 50% OFF on selected products.</p>
+
+      <a href="products.html"> View Offers </a>
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-column">
+          <h3>ShopEasy</h3>
+
+          <p>Your one-stop destination for online shopping.</p>
+        </div>
+
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+
+          <a href="index.html">Home</a>
+
+          <a href="products.html">Products</a>
+
+          <a href="#">Cart</a>
+        </div>
+
+        <div class="footer-column">
+          <h3>Account</h3>
+
+          <a href="signin.html">Sign In</a>
+
+          <a href="signup.html">Create Account</a>
+        </div>
+
+        <div class="footer-column">
+          <h3>Customer Support</h3>
+
+          <a href="#">Contact Us</a>
+
+          <a href="#">Help Center</a>
+
+          <a href="#">Returns & Refunds</a>
+        </div>
+      </div>
+
+      <div class="copyright">© 2026 ShopEasy. All Rights Reserved.</div>
+    </footer>
+  </body>
+</html>

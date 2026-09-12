@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Weather App</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>Weather App</h1>
+            <p>Live Weather Information</p>
+        </header>
+
+
+        <!-- Search -->
+
+        <div class="search-box">
+
+            <input
+                type="text"
+                id="cityInput"
+                placeholder="Enter city name"
+            >
+
+            <button id="searchButton">
+                Search
+            </button>
+
+        </div>
+
+
+        <!-- Message -->
+
+        <div id="message"></div>
+
+
+        <!-- Weather -->
+
+        <div id="weatherContainer" class="weather-container hidden">
+
+            <!-- Location -->
+
+            <div class="location">
+
+                <h2 id="cityName">--</h2>
+
+                <p id="countryName">--</p>
+
+            </div>
+
+
+            <!-- Main Weather -->
+
+            <div class="main-weather">
+
+                <div>
+
+                    <img
+                        id="weatherIcon"
+                        src=""
+                        alt="Weather Icon"
+                    >
+
+                </div>
+
+
+                <div class="temperature">
+
+                    <span id="temperature">
+                        --
+                    </span>
+
+                    <span>°C</span>
+
+                </div>
+
+
+                <div class="condition">
+
+                    <h3 id="weatherDescription">
+                        --
+                    </h3>
+
+                    <p>
+                        Feels like
+                        <span id="feelsLike">--</span>°C
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Weather Details -->
+
+            <div class="weather-details">
+
+                <div class="weather-item">
+
+                    <h3>Humidity</h3>
+
+                    <p>
+                        <span id="humidity">--</span>%
+                    </p>
+
+                </div>
+
+
+                <div class="weather-item">
+
+                    <h3>Pressure</h3>
+
+                    <p>
+                        <span id="pressure">--</span> hPa
+                    </p>
+
+                </div>
+
+
+                <div class="weather-item">
+
+                    <h3>Wind Speed</h3>
+
+                    <p>
+                        <span id="windSpeed">--</span> km/h
+                    </p>
+
+                </div>
+
+
+                <div class="weather-item">
+
+                    <h3>Min Temperature</h3>
+
+                    <p>
+                        <span id="minTemp">--</span>°C
+                    </p>
+
+                </div>
+
+
+                <div class="weather-item">
+
+                    <h3>Max Temperature</h3>
+
+                    <p>
+                        <span id="maxTemp">--</span>°C
+                    </p>
+
+                </div>
+
+
+                <div class="weather-item">
+
+                    <h3>Visibility</h3>
+
+                    <p>
+                        <span id="visibility">--</span> km
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Sunrise Sunset -->
+
+            <div class="sun-details">
+
+                <div>
+
+                    <h3>Sunrise</h3>
+
+                    <p id="sunrise">--</p>
+
+                </div>
+
+
+                <div>
+
+                    <h3>Sunset</h3>
+
+                    <p id="sunset">--</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

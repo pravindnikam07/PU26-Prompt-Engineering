@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ShopNow - Cart</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="logo">
+        <a href="index.html">ShopNow</a>
+      </div>
+
+      <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="cart.html">Cart</a>
+        <a href="signin.html">Sign In</a>
+        <a href="signup.html">Sign Up</a>
+      </nav>
+    </header>
+
+    <!-- Cart -->
+    <main class="cart-section">
+      <h1>Shopping Cart</h1>
+
+      <div class="cart-container">
+        <!-- Cart Items -->
+        <div class="cart-items">
+          <div class="cart-item">
+            <div class="cart-image">Product</div>
+
+            <div class="cart-details">
+              <h3>Wireless Headphones</h3>
+
+              <p>Price: ₹1,999</p>
+
+              <label>
+                Quantity:
+                <input type="number" value="1" min="1" />
+              </label>
+            </div>
+
+            <div class="cart-price">₹1,999</div>
+          </div>
+
+          <div class="cart-item">
+            <div class="cart-image">Product</div>
+
+            <div class="cart-details">
+              <h3>Smart Watch</h3>
+
+              <p>Price: ₹2,499</p>
+
+              <label>
+                Quantity:
+                <input type="number" value="1" min="1" />
+              </label>
+            </div>
+
+            <div class="cart-price">₹2,499</div>
+          </div>
+        </div>
+
+        <!-- Order Summary -->
+        <div class="order-summary">
+          <h2>Order Summary</h2>
+
+          <div class="summary-row">
+            <span>Subtotal</span>
+            <span>₹4,498</span>
+          </div>
+
+          <div class="summary-row">
+            <span>Shipping</span>
+            <span>Free</span>
+          </div>
+
+          <hr />
+
+          <div class="summary-total">
+            <span>Total</span>
+            <span>₹4,498</span>
+          </div>
+
+          <button class="btn checkout-btn">Proceed to Checkout</button>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div>
+        <h3>ShopNow</h3>
+        <p>Your simple online shopping destination.</p>
+      </div>
+
+      <div>
+        <h3>Quick Links</h3>
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="cart.html">Cart</a>
+      </div>
+
+      <div>
+        <h3>Account</h3>
+        <a href="signin.html">Sign In</a>
+        <a href="signup.html">Sign Up</a>
+      </div>
+    </footer>
+  </body>
+</html>
