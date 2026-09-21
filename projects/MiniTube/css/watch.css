@@ -1,0 +1,412 @@
+/* =========================================
+   WATCH PAGE
+========================================= */
+
+.watch-layout {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    380px;
+
+  gap: 25px;
+
+  padding: 25px;
+
+  max-width: 1800px;
+
+  margin: auto;
+}
+
+/* =========================================
+ PLAYER
+========================================= */
+
+.player-container {
+  width: 100%;
+
+  aspect-ratio: 16 / 9;
+
+  background: black;
+
+  border-radius: 10px;
+
+  overflow: hidden;
+}
+
+.player-container iframe {
+  width: 100%;
+
+  height: 100%;
+
+  border: none;
+}
+
+/* =========================================
+ VIDEO TITLE
+========================================= */
+
+.video-information {
+  padding-top: 18px;
+}
+
+.video-information h1 {
+  font-size: 22px;
+
+  line-height: 1.4;
+}
+
+/* =========================================
+ ACTION AREA
+========================================= */
+
+.video-actions {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-top: 18px;
+
+  gap: 15px;
+}
+
+/* =========================================
+ CHANNEL
+========================================= */
+
+.channel-info {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+}
+
+.large-avatar {
+  width: 45px;
+
+  height: 45px;
+
+  border-radius: 50%;
+
+  background: #ddd;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-weight: bold;
+}
+
+.channel-info h3 {
+  font-size: 15px;
+}
+
+.channel-info p {
+  font-size: 13px;
+
+  color: #606060;
+
+  margin-top: 3px;
+}
+
+/* =========================================
+ ACTION BUTTONS
+========================================= */
+
+.action-buttons {
+  display: flex;
+
+  gap: 8px;
+}
+
+.action-button {
+  border: none;
+
+  background: #f2f2f2;
+
+  padding: 10px 16px;
+
+  border-radius: 20px;
+
+  cursor: pointer;
+
+  font-size: 14px;
+}
+
+.action-button:hover {
+  background: #ddd;
+}
+
+.action-button.active {
+  background: #111;
+
+  color: white;
+}
+
+/* =========================================
+ DESCRIPTION
+========================================= */
+
+.description-box {
+  margin-top: 20px;
+
+  padding: 15px;
+
+  background: #f2f2f2;
+
+  border-radius: 10px;
+}
+
+.video-stats {
+  font-weight: bold;
+
+  margin-bottom: 10px;
+}
+
+#videoDescription {
+  white-space: pre-line;
+
+  line-height: 1.5;
+
+  font-size: 14px;
+
+  display: -webkit-box;
+
+  -webkit-line-clamp: 3;
+
+  -webkit-box-orient: vertical;
+
+  overflow: hidden;
+}
+
+#videoDescription.expanded {
+  display: block;
+}
+
+.description-button {
+  border: none;
+
+  background: none;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+  margin-top: 10px;
+}
+
+/* =========================================
+ RELATED VIDEOS
+========================================= */
+
+.related-section h2 {
+  font-size: 20px;
+
+  margin-bottom: 15px;
+}
+
+.related-card {
+  display: flex;
+
+  gap: 10px;
+
+  margin-bottom: 15px;
+
+  cursor: pointer;
+}
+
+.related-thumbnail {
+  width: 160px;
+
+  aspect-ratio: 16 / 9;
+
+  object-fit: cover;
+
+  border-radius: 7px;
+}
+
+.related-details {
+  flex: 1;
+}
+
+.related-title {
+  font-size: 14px;
+
+  font-weight: 600;
+
+  line-height: 1.35;
+
+  display: -webkit-box;
+
+  -webkit-line-clamp: 3;
+
+  -webkit-box-orient: vertical;
+
+  overflow: hidden;
+}
+
+.related-channel {
+  color: #606060;
+
+  font-size: 12px;
+
+  margin-top: 5px;
+}
+
+/* =========================================
+ COMMENTS
+========================================= */
+
+.comments-section {
+  margin-top: 35px;
+}
+
+.comments-section h2 {
+  margin-bottom: 20px;
+}
+
+.comment-input {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  margin-bottom: 25px;
+}
+
+.comment-input input {
+  flex: 1;
+
+  border: none;
+
+  border-bottom: 1px solid #999;
+
+  padding: 10px;
+
+  outline: none;
+}
+
+.comment-avatar {
+  width: 38px;
+
+  height: 38px;
+
+  border-radius: 50%;
+
+  background: #ddd;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-weight: bold;
+
+  flex-shrink: 0;
+}
+
+.comment {
+  display: flex;
+
+  gap: 12px;
+
+  margin-bottom: 20px;
+}
+
+.comment p {
+  margin-top: 5px;
+
+  color: #555;
+}
+
+/* =========================================
+ DARK MODE
+========================================= */
+
+body.dark .description-box {
+  background: #272727;
+}
+
+body.dark .channel-info p,
+body.dark .related-channel {
+  color: #aaa;
+}
+
+body.dark .action-button {
+  background: #272727;
+
+  color: white;
+}
+
+body.dark .action-button:hover {
+  background: #3a3a3a;
+}
+
+body.dark .description-button {
+  color: white;
+}
+
+body.dark .comment-input input {
+  background: transparent;
+
+  color: white;
+}
+
+/* =========================================
+ TABLET
+========================================= */
+
+@media (max-width: 1100px) {
+  .watch-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .related-section {
+    margin-top: 20px;
+  }
+
+  .related-card {
+    max-width: 600px;
+  }
+}
+
+/* =========================================
+ MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+  .watch-layout {
+    padding: 10px;
+  }
+
+  .player-container {
+    border-radius: 0;
+  }
+
+  .video-information h1 {
+    font-size: 18px;
+  }
+
+  .video-actions {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+  .action-buttons {
+    width: 100%;
+
+    overflow-x: auto;
+  }
+
+  .related-thumbnail {
+    width: 140px;
+  }
+}

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>MiniTube</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <!-- =====================================
+         HEADER
+    ====================================== -->
+
+    <header class="header">
+      <div class="header-left">
+        <button id="menuButton" class="icon-button">☰</button>
+
+        <a href="index.html" class="logo">
+          <span class="logo-icon"> ▶ </span>
+
+          <span> MiniTube </span>
+        </a>
+      </div>
+
+      <!-- SEARCH -->
+
+      <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search videos..." />
+
+        <button id="searchButton">🔍</button>
+      </div>
+
+      <div class="header-right">
+        <button class="icon-button">🎥</button>
+
+        <button class="icon-button">🔔</button>
+
+        <button id="themeButton" class="icon-button">🌙</button>
+
+        <div class="profile">U</div>
+      </div>
+    </header>
+
+    <!-- =====================================
+         APPLICATION
+    ====================================== -->
+
+    <div class="app-container">
+      <!-- =================================
+             SIDEBAR
+        ================================== -->
+
+      <aside id="sidebar" class="sidebar">
+        <nav>
+          <a href="index.html" class="nav-item active">
+            🏠
+            <span>Home</span>
+          </a>
+
+          <a href="#" class="nav-item" data-category="trending">
+            🔥
+            <span>Trending</span>
+          </a>
+
+          <a href="#" class="nav-item" data-category="music">
+            🎵
+            <span>Music</span>
+          </a>
+
+          <a href="#" class="nav-item" data-category="gaming">
+            🎮
+            <span>Gaming</span>
+          </a>
+
+          <a href="#" class="nav-item" data-category="education">
+            📚
+            <span>Education</span>
+          </a>
+
+          <a href="#" class="nav-item" data-category="news">
+            📰
+            <span>News</span>
+          </a>
+
+          <hr />
+
+          <a href="#" class="nav-item">
+            🕘
+            <span>History</span>
+          </a>
+
+          <a href="#" class="nav-item">
+            ⏰
+            <span>Watch Later</span>
+          </a>
+
+          <a href="#" class="nav-item">
+            👍
+            <span>Liked Videos</span>
+          </a>
+        </nav>
+      </aside>
+
+      <!-- =================================
+             MAIN CONTENT
+        ================================== -->
+
+      <main class="main-content">
+        <!-- CATEGORY BAR -->
+
+        <div id="categoryBar" class="category-bar">
+          <button class="category active" data-query="programming">All</button>
+
+          <button class="category" data-query="programming tutorial">
+            Programming
+          </button>
+
+          <button class="category" data-query="Java programming">Java</button>
+
+          <button class="category" data-query="JavaScript">JavaScript</button>
+
+          <button class="category" data-query="Artificial Intelligence">
+            AI
+          </button>
+
+          <button class="category" data-query="Data Structures">
+            Data Structures
+          </button>
+
+          <button class="category" data-query="Music">Music</button>
+
+          <button class="category" data-query="Gaming">Gaming</button>
+        </div>
+
+        <!-- PAGE TITLE -->
+
+        <div class="page-heading">
+          <h1 id="pageTitle">Recommended Videos</h1>
+        </div>
+
+        <!-- LOADING -->
+
+        <div id="loading" class="loading">Loading videos...</div>
+
+        <!-- ERROR -->
+
+        <div id="errorMessage" class="error-message"></div>
+
+        <!-- VIDEO GRID -->
+
+        <section id="videoGrid" class="video-grid"></section>
+
+        <!-- LOAD MORE -->
+
+        <div class="load-more-container">
+          <button id="loadMoreButton" class="load-more">Load More</button>
+        </div>
+      </main>
+    </div>
+
+    <script src="js/config.js"></script>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>

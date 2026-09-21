@@ -1,0 +1,7 @@
+const CONFIG = {
+  YOUTUBE_API_KEY: "YOUTUBE_API_KEY",
+
+  MAX_RESULTS: 24,
+
+  REGION_CODE: "IN",
+};
