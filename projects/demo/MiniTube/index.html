@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>MiniTube - Home</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <!-- HEADER -->
+
+    <header class="header">
+      <div class="header-left">
+        <button class="menu-button" id="menuButton">☰</button>
+
+        <a href="index.html" class="logo"> ▶ MiniTube </a>
+      </div>
+
+      <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search" />
+
+        <button id="searchButton">🔍</button>
+      </div>
+
+      <div class="header-right">
+        <button class="header-icon">🎥</button>
+
+        <button class="header-icon">🔔</button>
+
+        <div class="profile">U</div>
+      </div>
+    </header>
+
+    <!-- MAIN CONTAINER -->
+
+    <div class="main-container">
+      <!-- SIDEBAR -->
+
+      <aside class="sidebar" id="sidebar">
+        <a href="index.html" class="sidebar-item active">
+          🏠
+          <span>Home</span>
+        </a>
+
+        <a href="trending.html" class="sidebar-item">
+          🔥
+          <span>Trending</span>
+        </a>
+
+        <div class="sidebar-divider"></div>
+
+        <div class="sidebar-title">You</div>
+
+        <a href="#" class="sidebar-item">
+          📺
+          <span>Subscriptions</span>
+        </a>
+
+        <a href="#" class="sidebar-item">
+          🕘
+          <span>History</span>
+        </a>
+
+        <a href="#" class="sidebar-item">
+          ⏱️
+          <span>Watch Later</span>
+        </a>
+
+        <a href="#" class="sidebar-item">
+          👍
+          <span>Liked Videos</span>
+        </a>
+      </aside>
+
+      <!-- CONTENT -->
+
+      <main class="content">
+        <div class="page-header">
+          <h1 id="pageTitle">Recommended Videos</h1>
+        </div>
+
+        <div class="video-grid" id="videoGrid">
+          <div class="loading">Loading videos...</div>
+        </div>
+      </main>
+    </div>
+
+    <script src="js/config.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/home.js"></script>
+  </body>
+</html>

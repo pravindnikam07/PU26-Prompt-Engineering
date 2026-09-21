@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>MiniTube - Watch</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="header-left">
+        <button class="menu-button">☰</button>
+
+        <a href="index.html" class="logo"> ▶ MiniTube </a>
+      </div>
+
+      <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search" />
+
+        <button id="searchButton">🔍</button>
+      </div>
+
+      <div class="header-right">
+        <button class="header-icon">🎥</button>
+
+        <button class="header-icon">🔔</button>
+
+        <div class="profile">U</div>
+      </div>
+    </header>
+
+    <div class="main-container">
+      <aside class="sidebar">
+        <a href="index.html" class="sidebar-item">
+          🏠
+          <span>Home</span>
+        </a>
+
+        <a href="trending.html" class="sidebar-item">
+          🔥
+          <span>Trending</span>
+        </a>
+
+        <div class="sidebar-divider"></div>
+
+        <div class="sidebar-title">You</div>
+
+        <a href="#" class="sidebar-item">
+          📺
+          <span>Subscriptions</span>
+        </a>
+
+        <a href="#" class="sidebar-item">
+          🕘
+          <span>History</span>
+        </a>
+
+        <a href="#" class="sidebar-item">
+          ⏱️
+          <span>Watch Later</span>
+        </a>
+      </aside>
+
+      <main class="watch-content">
+        <div class="player-container">
+          <iframe
+            id="videoPlayer"
+            src=""
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          >
+          </iframe>
+        </div>
+
+        <div class="video-details">
+          <h1 id="videoTitle">Loading...</h1>
+
+          <div class="watch-info">
+            <div>
+              <strong id="channelName"> Channel </strong>
+
+              <p id="videoStats">Loading...</p>
+            </div>
+
+            <div class="watch-actions">
+              <button>👍 Like</button>
+
+              <button>👎 Dislike</button>
+
+              <button>↗ Share</button>
+            </div>
+          </div>
+
+          <div class="description-box">
+            <p id="videoDescription">Loading description...</p>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="js/config.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/watch.js"></script>
+  </body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>MiniTube - Trending</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="header-left">
+        <button class="menu-button" id="menuButton">☰</button>
+
+        <a href="index.html" class="logo"> ▶ MiniTube </a>
+      </div>
+
+      <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search" />
+
+        <button id="searchButton">🔍</button>
+      </div>
+
+      <div class="header-right">
+        <button class="header-icon">🎥</button>
+
+        <button class="header-icon">🔔</button>
+
+        <div class="profile">U</div>
+      </div>
+    </header>
+
+    <div class="main-container">
+      <aside class="sidebar" id="sidebar">
+        <a href="index.html" class="sidebar-item">
+          🏠
+          <span>Home</span>
+        </a>
+
+        <a href="trending.html" class="sidebar-item active">
+          🔥
+          <span>Trending</span>
+        </a>
+
+        <div class="sidebar-divider"></div>
+
+        <div class="sidebar-title">You</div>
+
+        <a href="#" class="sidebar-item">
+          📺
+          <span>Subscriptions</span>
+        </a>
+
+        <a href="#" class="sidebar-item">
+          🕘
+          <span>History</span>
+        </a>
+
+        <a href="#" class="sidebar-item">
+          ⏱️
+          <span>Watch Later</span>
+        </a>
+
+        <a href="#" class="sidebar-item">
+          👍
+          <span>Liked Videos</span>
+        </a>
+      </aside>
+
+      <main class="content">
+        <div class="page-header">
+          <h1>🔥 Trending</h1>
+        </div>
+
+        <div class="video-grid" id="trendingGrid">
+          <div class="loading">Loading trending videos...</div>
+        </div>
+      </main>
+    </div>
+
+    <script src="js/config.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/trending.js"></script>
+  </body>
+</html>
